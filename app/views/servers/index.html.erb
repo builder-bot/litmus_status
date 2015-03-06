@@ -1,0 +1,25 @@
+<h1>Current Server Status</h1>
+
+<ul id="servers">
+	<% @servers.each do |server| %>
+		<li
+			><%= server.domain %>  - <b><%= server.status %></b>
+			<p><%= server.current_message.body %></p>
+			<p><%= server.current_message.created_at %></p>
+
+			<% unless server.most_recent.blank? %>
+				<h2>Most Recent Messages</h2>
+				<ul class="old-messages">
+					<% server.most_recent.each do |msg| %>
+						<li>
+							<p><%= msg.body %></p>
+							<p><%= msg.created_at %></p>
+						</li>
+					<% end %>
+				</ul>
+			<% end %>
+		</li>
+
+
+	<% end %>
+</ul>
