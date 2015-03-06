@@ -4,38 +4,37 @@ This runs on Ruby 2.0 and Rails 4.1.9.
 
 To get started, install the app like any other rails application.
 
-...ruby
+```
 bundle install
 rake db:create
 rake db:migrate
 rake db:seed
-...
+```
 
 This was created with multiple servers in mind.  Seeding will create the standard litmus.com web server, but if you feel inclined, you can create others of various types (web, mail, db, etc), or different domains.
 
 At first sight, you'll see a page with server status and a default message.  To update the message and/or status, send a post request to:
 
-...ruby
+```
 http://0.0.0.0:3000/api/v1/servers/1
-...
-
+```
 
 for example:
 
-ruby...
+```
 curl -X PUT -H 'Content-Type: application/json' http://0.0.0.0:3000/api/v1/servers/1 -d '{"server": {"status": "up", message": "Ok, things are all good now."}}'
-...
+```
 
 
 To quickly update the status, hit the follwing input with a put request:
 
-ruby...
+```
 http://0.0.0.0:3000/api/v1/servers/1/status/<up|down>
-...
+```
 
 i.e.:
 
-ruby...
+```
 curl -X PUT -H 'Content-Type: application/json' http://0.0.0.0:3000/api/v1/servers/1/status/up -d ''
-...
+```
 
