@@ -3,12 +3,11 @@ This runs on Ruby 2.0 and Rails 4.1.9.
 
 To get started, install the app like any other rails application.
 
-```
-bundle install
-rake db:create
-rake db:migrate
-rake db:seed
-```
+    bundle install
+    rake db:create
+    rake db:migrate
+    rake db:seed
+
 
 This was created with multiple servers in mind.  Seeding will create the standard litmus.com web server, but if you feel inclined, you can create others of various types (web, mail, db, etc), or different domains.
 
