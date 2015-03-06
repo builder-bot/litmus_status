@@ -1,5 +1,4 @@
 # Server Status Application
-
 This runs on Ruby 2.0 and Rails 4.1.9.
 
 To get started, install the app like any other rails application.
@@ -15,26 +14,18 @@ This was created with multiple servers in mind.  Seeding will create the standar
 
 At first sight, you'll see a page with server status and a default message.  To update the message and/or status, send a post request to:
 
-```
-http://0.0.0.0:3000/api/v1/servers/1
-```
+    http://0.0.0.0:3000/api/v1/servers/1
 
-for example:
+For example:
 
-```
-curl -X PUT -H 'Content-Type: application/json' http://0.0.0.0:3000/api/v1/servers/1 -d '{"server": {"status": "up", message": "Ok, things are all good now."}}'
-```
-
+    curl -X PUT -H 'Content-Type: application/json' http://0.0.0.0:3000/api/v1/servers/1 -d '{"server": {"status": "up", message": "Ok, things are all good now."}}'
 
 To quickly update the status, hit the follwing input with a put request:
 
-```
-http://0.0.0.0:3000/api/v1/servers/1/status/<up|down>
-```
+    http://0.0.0.0:3000/api/v1/servers/1/status/<up|down>
 
 i.e.:
 
-```
-curl -X PUT -H 'Content-Type: application/json' http://0.0.0.0:3000/api/v1/servers/1/status/up -d ''
-```
+    curl -X PUT -H 'Content-Type: application/json' http://0.0.0.0:3000/api/v1/servers/1/status/up -d ''
+
 
