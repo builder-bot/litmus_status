@@ -1,4 +1,3 @@
-# Server Status Application
 This runs on Ruby 2.0 and Rails 4.1.9.
 
 To get started, install the app like any other rails application.
